@@ -28,7 +28,7 @@ function App() {
     contactDetails,
   } = homepage;
   return (
-    <div className="App">
+    <div className="">
       <Header logo={companyName} menu={navigation} />
       <Hero {...hero} />
       <Weather {...weather} />

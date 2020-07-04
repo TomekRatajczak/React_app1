@@ -7,11 +7,18 @@ import Navigation from './Navigation';
 // const logo = props.logo
 // const menu = props.menu
 
-export default function Header() {
+export default function Header({logo,menu}) {
   return (
-    <div>
-      Nagłówek
-      <Navigation />
+    <div className={s.Header}>
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+           <div>{logo}</div>
+           <div>
+             <Navigation menu={menu}/>
+           </div>
+        </div>
+      </div>
+      
     </div>
       
     
