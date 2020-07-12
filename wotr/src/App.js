@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Weather from './components/Weather';
 import FishingForm from './components/FishingForm';
+import AnimationForm from './components/AnimationForm';
 import DepthTest from './components/DepthTest';
 import FloatSets from './components/FloatSets';
 import Groundbait from './components/Groundbait';
@@ -33,8 +34,11 @@ function App() {
       <Hero {...hero} />
       <Weather {...weather} />
       <FishingForm {...fishingForm} />
+      <AnimationForm />
       <DepthTest {...depthTest} />
       <FloatSets {...floatSets} />
+      <AnimationForm />
+      <AnimationForm />
       <Groundbait {...groundbait} />
       <Tactics {...tactics} />
       <Footer {...contact} {...contactDetails} />

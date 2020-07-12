@@ -5,10 +5,10 @@ import s from './style.module.css';
 // const logo = props.logo
 // const menu = props.menu
 
-export default function FishingForm() {
+export default function FishingForm({title, parts}) {
   return (
     <div>
-      Formularz
+      formularz
     </div>
   )
 }

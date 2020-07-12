@@ -27,13 +27,82 @@ export const homepage = {
     },
     weather: {
       title: 'Pogoda na ryby',
-      subtitle: 'Phasellus nisi sem, laoreet pulvinar pellentesque quis, laoreet eget elit. Ut non placerat est. Vivamus molestie libero ac lacinia vehicula.',
       button: "Read more",
     },
     fishingForm: {
       title: 'Formularz',
-      subtitle: 'Phasellus nisi sem, laoreet pulvinar pellentesque quis, laoreet eget elit. Ut non placerat est. Vivamus molestie libero ac lacinia vehicula.',
-      button: "Read more",
+      parts: [
+        {
+          tag: "Pora roku",
+          answer: [
+            "Wiosna",
+            "Lato",
+            "Jesień",
+            "Zima"
+          ]
+        },
+        {
+          tag: "Pora dnia",
+          answer: [
+            "Poranek",
+            "Południe",
+            "Wieczór",
+            "Noc"
+          ]
+        },
+        {
+          tag: "Pogoda",
+          answer: [
+            "Pochmurno",
+            "Słonecznie",
+            "Umiarkowanie",
+            "Zima"
+          ]
+        },
+        {
+          tag: "Rodzaj połowu",
+          answer: [
+            "Rekreacyjnie",
+            "Treningowo",
+            "Oficjalny trening",
+            "Zawoody"
+          ]
+        },
+        {
+          tag: "Czas połowu",
+          answer: [
+            "2 godz",
+            "3 godz",
+            "4 godziny",
+            "oow 5 godzin"
+          ]
+        },
+        {
+          tag: "dłogość edki",
+          answer: [
+            "3 m",
+            "4 m",
+            "5 m",
+            "6 m",
+            "7 m",
+            "8 m",
+            "9 m"
+          ]
+        },
+        {
+          tag: "Poławiane gatunki",
+          answer: [
+            "Ukleja",
+            "Płoć",
+            "Krąp",
+            "Leszcz",
+            "Kleń, Jaź, Jelec",
+            "Ryby karpiowate małe",
+            "Ryby karpiowate duże"
+          ]
+        }
+        
+      ]
      
     },
     depthTest: {
