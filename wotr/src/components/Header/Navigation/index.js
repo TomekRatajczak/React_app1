@@ -3,7 +3,7 @@ import s from './style.module.css';
 
 export default function Navigation({menu}) {
   return (
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div className="collapse navbar-collapse" id="mainMenu">
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         {menu.map((item)=>(
           <li className="nav-item">
