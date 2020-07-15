@@ -4,7 +4,7 @@ const api = {
   key: "3fd76667636a1b1e95e4306274b34af4",
   base: "https://api.openweathermap.org/data/2.5/"
 }
-export default function Weather() {
+export default function Weather({title}) {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
@@ -33,8 +33,11 @@ export default function Weather() {
     return `${day}, ${date} ${month} ${year}`
   }
   return (
-    <div className="app">
+
+    <div className={s.root}>
+      
       <div className="container">
+        <h2 className="mb-5">{title}</h2>
         <div className="search-box">
           <input
             type="text"

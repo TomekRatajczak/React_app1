@@ -1,0 +1,25 @@
+.root{
+    background-color: #222;
+    padding-top: 50px;
+    color: white;
+}
+h6{
+    text-align: center;
+}
+.contactDetails{
+    font-size: 30px;
+}
+.contactDetails img{
+    width:80px;
+    margin:30px;
+   }
+
+.icons img{
+width:80px;
+margin:90px 20px;
+}
+.copywrtih{
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+}

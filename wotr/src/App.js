@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Weather from './components/Weather';
 import FishingForm from './components/FishingForm';
-import AnimationForm from './components/AnimationForm';
 import About from './components/About';
 import DepthTest from './components/DepthTest';
 import FloatSets from './components/FloatSets';
@@ -20,6 +19,7 @@ function App() {
     companyName,
     navigation,
     hero,
+    about,
     weather,
     fishingForm,
     depthTest,
@@ -33,14 +33,11 @@ function App() {
     <div className="">
       <Header logo={companyName} menu={navigation} />
       <Hero {...hero} />
-      <About/>
+      <About {...about}/>
       <Weather {...weather} />
       <FishingForm {...fishingForm} />
-      <AnimationForm />
       <DepthTest {...depthTest} />
       <FloatSets {...floatSets} />
-      <AnimationForm />
-      <AnimationForm />
       <Groundbait {...groundbait} />
       <Tactics {...tactics} />
       <Footer {...contact} {...contactDetails} />
