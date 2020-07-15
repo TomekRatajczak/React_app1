@@ -16,9 +16,9 @@ export const homepage = {
       },
     ],
     hero: {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      subtitle: 'In nec lorem quis turpis tincidunt tempor. Sed sodales lobortis turpis, nec faucibus',
-      button: "Read more",
+      title: 'Łowienie na rzece wcale nie jest takie trudne!',
+      subtitle: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach - kliknij w przycisk poniżej i poznaj nasze techniki',
+      button: "Zaczynamy",
       images: [
         require('./images/1.jpg'),
         require('./images/2.jpg'),
@@ -28,7 +28,7 @@ export const homepage = {
     about: {
       title: 'O projekcie',
       subtitle: '„Ryby są wszędzie tylko ty nie potrafisz ich łowić”- tak brzmiały lekcje jakie otrzymywałem od mojego Ojca. Dzisiaj spotykam wielu wędkarzy, którzy jak mantra powtarzają „Panie tu nie ma ryby”, a gdy widzą że mi spławik zatapia się co chwile uznają że mam po prostu farta. Ale gdy oni piją piwo i zakładają białego robaka na haczyk nr 8 😉 Ja przygotowuje każdy szczegół: mozolne gruntowanie, odpowiednio skomponowaną i domoczoną zanętę. To tylko od Ciebie zależy czy będziesz łowić rybę co minutę czy wygolę nic nie złowisz.',subtitle2: 'Jeżeli chcesz przekonać się jak to zrobić to: ',
-      button: "Zaczynajmy!"
+      button: "Zaczynamy!"
     },
     weather: {
       title: 'Pogoda na ryby',

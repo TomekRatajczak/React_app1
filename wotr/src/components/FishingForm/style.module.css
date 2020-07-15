@@ -7,6 +7,16 @@
 
 legend{
     font-weight: 500;
+    color: #ffc421;
+    margin-top: 10px;
+}
+
+.border{
+    border: 2px solid #ffc421;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #444;
+    min-width: 450px;
 }
 
 

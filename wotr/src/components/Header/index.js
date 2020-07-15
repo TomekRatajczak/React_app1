@@ -12,7 +12,7 @@ export default function Header({ logo, menu }) {
     <div className={s.Header}>
 
       <nav className="navbar justify-content-between align-items-center navbar-expand-md navbar-dark bg-dark">
-        <div>{logo}</div>
+        <div className={s.logo}>{logo}</div>
         <div>
           <Navigation menu={menu} />
         </div>

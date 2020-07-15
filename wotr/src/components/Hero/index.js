@@ -9,7 +9,7 @@ export default function Hero({title,subtitle,button,images}) {
         <div className={s.text}>
           <h2>{title}</h2>
           <div className="mt-4 mb-4">{subtitle}</div>
-          <button className="btn btn-primary btn-lg">{button}</button>
+          <button className="btn btn-primary btn-lg btn-warning">{button}</button>
         </div>
       </div>
     </div>

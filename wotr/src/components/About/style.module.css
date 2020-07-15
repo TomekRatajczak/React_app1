@@ -10,3 +10,8 @@
   max-width: 800px;
   font-size: 22px;
 }
+.header{
+  
+  padding: 10px;
+  border:2px solid #ffc421;
+}
