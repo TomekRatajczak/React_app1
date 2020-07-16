@@ -19,11 +19,11 @@ export const homepage = {
       title: 'Łowienie na rzece wcale nie jest takie trudne!',
       subtitle: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach - kliknij w przycisk poniżej i poznaj nasze techniki',
       button: "Zaczynamy",
-      images: [
-        require('./images/1.jpg'),
-        require('./images/2.jpg'),
-        require('./images/3.jpg'),
-      ]
+      // images: [
+        // require('./images/1.jpg'),
+        // require('./images/2.jpg'),
+        // require('./images/3.jpg'),
+      // ]
     },
     about: {
       title: 'O projekcie',

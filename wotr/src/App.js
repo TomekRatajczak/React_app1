@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { homepage } from './homepage.const.js';
+import { Button } from 'reactstrap';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
