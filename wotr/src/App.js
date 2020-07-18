@@ -20,25 +20,14 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      partOfTheYear: this.props.partOfTheYear,
-      partOfTheDay: this.props.partOfTheDay,
-      weatherNow: this.props.weatherNow,
-      typeOfCatch: this.props.typeOfCatch,
-      timeOfFishing: this.props.timeOfFishing,
-      rodLength: this.props.rodLength,
-      spicies: this.props.spicies,
-      depthMax: this.props.depthMax,
-      depthMin: this.props.depthMin,
-      riverPull: this.props.riverPull,
-      typeOfBottom: this.props.typeOfBottom,
-      underwaterHooks: this.props.underwaterHooks
+      fishingForm: {}
     };
   }
   handleOnChangeState = fishingFormState => {
     this.setState({
       fishingForm: fishingFormState
-    });
-    console.log("this.state", this.state)
+    }, () => console.log("this.state", this.state)
+    );
   };
   render() {
     const {
@@ -66,7 +55,7 @@ export default class App extends React.Component {
           {...depthTest}
         />
         <FloatSets {...floatSets} />
-        <Groundbait {...groundbait} state={this.state.fishingForm} />
+        <Groundbait {...groundbait} state={...this.state.fishingForm} />
         <Tactics {...tactics} />
         <Footer {...contact} {...contactDetails} />
       </div>

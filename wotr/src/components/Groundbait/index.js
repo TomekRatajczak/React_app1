@@ -7,16 +7,6 @@ import s from './style.module.css'
 export default class Groundbait extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      partOfTheYear: this.props.partOfTheYear,
-      partOfTheDay: this.props.partOfTheDay,
-      weatherNow: this.props.weatherNow,
-      typeOfCatch: this.props.typeOfCatch,
-      timeOfFishing: this.props.timeOfFishing,
-      rodLength: this.props.rodLength,
-      spicies: this.props.spicies,
-    };
   }
 
   render() {
@@ -34,7 +24,7 @@ export default class Groundbait extends React.Component {
           <div class="col-sm-10 col-md-5">
             Zanęta
             <ul>
-                <li>Gatunek{this.props.spicies}</li>
+                <li>Gatunek{this.state.props.spicies}</li>
                 <li>spławik: Bombka</li>
                 <li>obciążenie główne: 5g</li>
                 <li>obciążenie dodatkowe: 2,4g</li>
