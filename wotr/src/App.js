@@ -20,12 +20,26 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      fishingForm: {}
+      fishingForm: {},
+      depthTest: {},
+      floatSets: {}
     };
   }
   handleOnChangeState = fishingFormState => {
     this.setState({
       fishingForm: fishingFormState
+    }, () => console.log("this.state", this.state)
+    );
+  };
+  handleOnChangeDepthTestState = depthTestState => {
+    this.setState({
+      depthTest: depthTestState
+    }, () => console.log("this.state", this.state)
+    );
+  };
+  handleOnChangeFloatSets = floatSetsState => {
+    this.setState({
+      floatSets: floatSetsState
     }, () => console.log("this.state", this.state)
     );
   };
@@ -51,11 +65,9 @@ export default class App extends React.Component {
         <About {...about} />
         <Weather {...weather} />
         <FishingForm {...fishingForm} onSubmit={this.handleOnChangeState.bind(this)} state={this.state.fishingForm}/>
-        <DepthTest
-          {...depthTest}
-        />
-        <FloatSets {...floatSets} />
-        <Groundbait {...groundbait} state={...this.state.fishingForm} />
+        <DepthTest {...depthTest} onSubmit={this.handleOnChangeDepthTestState.bind(this)} state={this.state.depthTest}/>
+        <FloatSets {...floatSets} onSubmit={this.handleOnChangeFloatSets.bind(this)} state={this.state.floatSets} {...this.state.depthTest} />
+        <Groundbait {...groundbait} {...this.state.fishingForm} />
         <Tactics {...tactics} />
         <Footer {...contact} {...contactDetails} />
       </div>

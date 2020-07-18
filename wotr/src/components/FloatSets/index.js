@@ -5,19 +5,20 @@ import PropTypes from 'prop-types';
 export default class FloatSets extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       floatSet: this.props.floatSet
-      
     };
     
   }
-
+  static defaultProps = {
+    floatSet: ''
+  }
  
 
   handleOnSubmit = event => {
     event.preventDefault();
-
+    this.props.onSubmit(this.state);
     console.log("event", event.target);
     console.log("this.state", this.state);
   };
@@ -29,6 +30,7 @@ export default class FloatSets extends React.Component {
   };
 
   render() {
+    const {spławik} = this.props.floatSet
     return (
       <div className={s.root}>
         <div className="container"></div>
@@ -44,12 +46,12 @@ export default class FloatSets extends React.Component {
                 <option value="Przepływanka z przytrzymaniem i wpuszczeniem">Przepływanka z przytrzymaniem i wpuszczeniem</option>
                 <option value="Technika na stopa">Technika na stopa</option>
               </select>
-              <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Wybierz</button>
+              <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
             </form>
             <div>Obrazek</div>
             <ul>
               <li>żyłka główna: 0,16 mm</li>
-              <li>spławik: Bombka {this.props.value}</li>
+              <li>spławik: {spławik} {this.props.riverPull}</li>
               <li>obciążenie główne: 5g</li>
               <li>obciążenie dodatkowe: 2,4g</li>
               <li>obiążenie sygnalizacyjne: 3x0,2g</li>
