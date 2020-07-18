@@ -7,13 +7,9 @@ export default class FloatSets extends React.Component {
     super(props);
     
     this.state = {
-      floatSet: this.props.floatSet
+      floatSet: this.props.floatSet 
     };
-    
-  }
-  static defaultProps = {
-    floatSet: ''
-  }
+      }
  
 
   handleOnSubmit = event => {
@@ -30,7 +26,11 @@ export default class FloatSets extends React.Component {
   };
 
   render() {
-    const {spławik} = this.props.floatSet
+      const spławik = ''
+      if(this.state.floatSet === "Klasyczna przepływanka"){
+        spławik = "spławik typu bombka"
+      }
+    
     return (
       <div className={s.root}>
         <div className="container"></div>
