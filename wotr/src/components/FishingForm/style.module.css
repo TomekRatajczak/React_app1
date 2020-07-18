@@ -7,14 +7,14 @@
 
 legend{
     font-weight: 500;
-    color: #ffc421;
-    margin-top: 25px;
+    color: #ffc421 !important;
+    margin-top: 20px;
 }
 
 .border{
-    border: 2px solid #ffc421;
-    padding: 10px;
-    border-radius: 20px;
+    border: 1px solid #ffc421;
+    padding: 5px;
+    border-radius: 5px;
     background-color: #444;
     min-width: 450px;
     margin: 10px 0;

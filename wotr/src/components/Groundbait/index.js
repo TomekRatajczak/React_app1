@@ -11,7 +11,8 @@ export default function Groundbait({ title }) {
       <h2 className="mb-5 text-center">{title}</h2>
       <div className="row justify-content-center">
         <div class="col-sm-12 col-md-6">
-        <div class="embed-responsive embed-responsive-16by9">
+        <h3 className="mb-4 text-center text-warning">Przygotowanie zanęty:</h3>
+        <div class=" mx-auto col-10 embed-responsive embed-responsive-16by9">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1PDMFQAvHXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>

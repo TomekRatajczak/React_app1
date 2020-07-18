@@ -9,7 +9,7 @@ export default function About({title, subtitle, subtitle2, button}) {
         <h2 cassName="mb-5 text-center">{title}</h2>
           <div className="mt-4 mb-4">{subtitle}</div>
           <div className="mt-4 mb-4">{subtitle2}</div>
-          <button className="btn btn-secondary">{button}</button>
+          <button className="btn btn-warning btn-primary btn-lg">{button}</button>
         </div>
       </div>
     </div>

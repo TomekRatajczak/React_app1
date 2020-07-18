@@ -15,35 +15,54 @@ import Tactics from './components/Tactics';
 import Footer from './components/Footer';
 import s from './app.module.css';
 
-function App() {
-  const {
-    companyName,
-    navigation,
-    hero,
-    about,
-    weather,
-    fishingForm,
-    depthTest,
-    floatSets,
-    groundbait,
-    tactics,
-    contact,
-    contactDetails,
-  } = homepage;
-  return (
-    <div className="">
-      <Header logo={companyName} menu={navigation} />
-      <Hero {...hero} />
-      <About {...about}/>
-      <Weather {...weather} />
-      <FishingForm {...fishingForm} />
-      <DepthTest {...depthTest} />
-      <FloatSets {...floatSets} />
-      <Groundbait {...groundbait} />
-      <Tactics {...tactics} />
-      <Footer {...contact} {...contactDetails} />
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      depthMax: this.props.depthMax,
+      depthMin: this.props.depthMin,
+      riverPull: this.props.riverPull,
+      typeOfBottom: this.props.typeOfBottom,
+      underwaterHooks: this.props.underwaterHooks
+    };
+  }
+  render(){
+    const {
+      companyName,
+      navigation,
+      hero,
+      about,
+      weather,
+      fishingForm,
+      depthTest,
+      floatSets,
+      groundbait,
+      tactics,
+      contact,
+      contactDetails,
+    } = homepage;
+    return (
+      <div className="">
+        <Header logo={companyName} menu={navigation} />
+        <Hero {...hero} />
+        <About {...about}/>
+        <Weather {...weather} />
+        <FishingForm {...fishingForm} />
+        <DepthTest 
+          {...depthTest} 
+          depthMax={this.state.depthMax}
+          depthMin={this.state.depthMin}
+          riverPull={this.state.riverPull}
+          typeOfBottom={this.state.typeOfBottom}
+          underwaterHooks={this.state.underwaterHooks}
+          />
+        <FloatSets {...floatSets} />
+        <Groundbait {...groundbait} />
+        <Tactics {...tactics} />
+        <Footer {...contact} {...contactDetails} />
+      </div>
+    );
+  }
 }
 
-export default App;
