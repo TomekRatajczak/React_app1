@@ -34,9 +34,9 @@ export default class App extends React.Component {
       underwaterHooks: this.props.underwaterHooks
     };
   }
-  handleOnChange = fisingFormState => {
+  handleOnChangeState = fishingFormState => {
     this.setState({
-      fishingForm: fisingFormState
+      fishingForm: fishingFormState
     });
     console.log("this.state", this.state)
   };
@@ -61,7 +61,7 @@ export default class App extends React.Component {
         <Hero {...hero} />
         <About {...about} />
         <Weather {...weather} />
-        <FishingForm {...fishingForm} onSubmit={this.handleOnChange.bind(this)} state={this.state.fishingForm}/>
+        <FishingForm {...fishingForm} onSubmit={this.handleOnChangeState.bind(this)} state={this.state.fishingForm}/>
         <DepthTest
           {...depthTest}
         />
