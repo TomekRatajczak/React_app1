@@ -27,7 +27,13 @@ export default class App extends React.Component {
       underwaterHooks: this.props.underwaterHooks
     };
   }
-  render(){
+  handleOnChange = fisingFormState => {
+    this.setState({
+      fishingForm: fisingFormState
+    });
+    console.log("this.state", this.state)
+  };
+  render() {
     const {
       companyName,
       navigation,
@@ -46,19 +52,14 @@ export default class App extends React.Component {
       <div className="">
         <Header logo={companyName} menu={navigation} />
         <Hero {...hero} />
-        <About {...about}/>
+        <About {...about} />
         <Weather {...weather} />
-        <FishingForm {...fishingForm} />
-        <DepthTest 
-          {...depthTest} 
-          depthMax={this.state.depthMax}
-          depthMin={this.state.depthMin}
-          riverPull={this.state.riverPull}
-          typeOfBottom={this.state.typeOfBottom}
-          underwaterHooks={this.state.underwaterHooks}
-          />
+        <FishingForm {...fishingForm} onSubmit={this.handleOnChange.bind(this)} state={this.state.fishingForm}/>
+        <DepthTest
+          {...depthTest}
+        />
         <FloatSets {...floatSets} />
-        <Groundbait {...groundbait} />
+        <Groundbait {...groundbait} state={this.state.fishingForm} />
         <Tactics {...tactics} />
         <Footer {...contact} {...contactDetails} />
       </div>

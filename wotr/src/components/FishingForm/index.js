@@ -18,7 +18,7 @@ export default class FishingForm extends React.Component{
 
   handleOnSubmit = event => {
     event.preventDefault();
-
+    this.props.onSubmit(this.state);
     console.log("event", event.target);
     console.log("this.state", this.state);
   };
