@@ -8,7 +8,15 @@ export default class Groundbait extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = state;
+    this.state = {
+      partOfTheYear: this.props.partOfTheYear,
+      partOfTheDay: this.props.partOfTheDay,
+      weatherNow: this.props.weatherNow,
+      typeOfCatch: this.props.typeOfCatch,
+      timeOfFishing: this.props.timeOfFishing,
+      rodLength: this.props.rodLength,
+      spicies: this.props.spicies,
+    };
   }
 
   render() {

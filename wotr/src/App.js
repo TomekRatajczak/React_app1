@@ -20,6 +20,13 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
+      partOfTheYear: this.props.partOfTheYear,
+      partOfTheDay: this.props.partOfTheDay,
+      weatherNow: this.props.weatherNow,
+      typeOfCatch: this.props.typeOfCatch,
+      timeOfFishing: this.props.timeOfFishing,
+      rodLength: this.props.rodLength,
+      spicies: this.props.spicies,
       depthMax: this.props.depthMax,
       depthMin: this.props.depthMin,
       riverPull: this.props.riverPull,
