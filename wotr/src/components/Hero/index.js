@@ -54,7 +54,7 @@ const Hero = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img className=" w-100 vh-100"  src={item.src} alt={item.altText} />
+        <img className="w-100 vh-100"  src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );

@@ -71,7 +71,7 @@ export default class FishingForm extends React.Component{
         <div className="container">
           <h2 className="mb-5 text-center">Formularz</h2>
           <form className="form-group" onSubmit={this.handleOnSubmit}>
-            <div className="row ">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Pora roku:</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -92,7 +92,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Pora dnia:</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -113,7 +113,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Pogoda:</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -134,7 +134,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Rodzaj połowu:</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -151,7 +151,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Czas połowu:</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -172,7 +172,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Dłogość wedki</legend>
               <div className={s.border}>
                 <div className="form-check form-check-inline">
@@ -205,7 +205,7 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               <legend className="col-form-label col-sm-2 pt-0">Poławiane gatunki:</legend>
               <div className={s.border}>
                 <div className="col-sm-10">
@@ -240,7 +240,9 @@ export default class FishingForm extends React.Component{
                 </div>
               </div>
             </div>
-            <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
+            <div className="row mt-5 justify-content-center">
+              <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
+            </div>
           </form>
         </div>
       </div>

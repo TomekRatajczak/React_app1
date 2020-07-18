@@ -155,7 +155,9 @@ export default class FloatSets extends React.Component {
                 <option value="Przepływanka z przytrzymaniem i wpuszczeniem">Przepływanka z przytrzymaniem i wpuszczeniem</option>
                 <option value="Technika na stopa">Technika na stopa</option>
               </select>
-              <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
+              <div className="row mt-5 justify-content-center">
+                <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
+              </div>            
             </form>
             <div>Obrazek</div>
             <ul>

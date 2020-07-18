@@ -69,7 +69,7 @@ export default class DepthTest extends React.Component {
             <form className="form-group" onSubmit={this.handleOnSubmit}>
               <label for="Głębokość minimalna w metrach">Głębokość minimalna w metrach:</label>
 
-              <select className="form-control border border-warning bg-dark text-white" id="Głębokość minimalna w metrach" value={this.state.value} onChange={this.handleOnDepthMaxChange}>
+              <select className="form-control border border-warning bg-dark text-white" id="Głębokość minimalna w metrach" value={this.state.depthMin} onChange={this.handleOnDepthMaxChange}>
                 <option value="1">1m</option>
                 <option value="2">2m</option>
                 <option value="3">3m</option>
@@ -83,7 +83,7 @@ export default class DepthTest extends React.Component {
               </select>
 
               <label for="Głębokość maksymalna w metrach">Głębokość maksymalna w metrach:</label>
-              <select class="form-control border border-warning bg-dark text-white" id="Głębokość maksymalna w metrach" value={this.state.value} onChange={this.handleOnDepthMinChange}>
+              <select class="form-control border border-warning bg-dark text-white" id="Głębokość maksymalna w metrach" value={this.state.depthMax} onChange={this.handleOnDepthMinChange}>
                 <option value="1">1m</option>
                 <option value="2">2m</option>
                 <option value="3">3m</option>
@@ -97,7 +97,7 @@ export default class DepthTest extends React.Component {
               </select>
 
               <label for="Uciąg wody w gramach">Uciąg wody w gramach:</label>
-              <select class="form-control border border-warning bg-dark text-white" id="Uciąg wody w gramach" value={this.state.value} onChange={this.handleOnRiverPullChange}>
+              <select class="form-control border border-warning bg-dark text-white" id="Uciąg wody w gramach" value={this.state.riverPull} onChange={this.handleOnRiverPullChange}>
                 <option value="1">1g</option>
                 <option value="2">2g</option>
                 <option value="3">3g</option>
@@ -122,7 +122,7 @@ export default class DepthTest extends React.Component {
               </select>
 
               <label for="Charakterystyka dna">Charakterystyka dna:</label>
-              <select class="form-control border border-warning bg-dark text-white" id="Charakterystyka dna" value={this.state.value} onChange={this.handleOnTypeOfBottomChange}>
+              <select class="form-control border border-warning bg-dark text-white" id="Charakterystyka dna" value={this.state.typeOfBottom} onChange={this.handleOnTypeOfBottomChange}>
                 <option value="Płaskie">Płaskie</option>
                 <option value="Wznoszące">Wznoszące</option>
                 <option value="Opadające">Opadające</option>
@@ -130,13 +130,15 @@ export default class DepthTest extends React.Component {
               </select>
 
               <label for="Podwodne zaczepy">Podwodne zaczepy:</label>
-              <select class="form-control border border-warning bg-dark text-white" id="Podwodne zaczepy" value={this.state.value} onChange={this.handleOnUnderwaterHooksChange}>
+              <select class="form-control border border-warning bg-dark text-white" id="Podwodne zaczepy" value={this.state.underwaterHooks} onChange={this.handleOnUnderwaterHooksChange}>
                 <option value="Brak">Brak</option>
                 <option value="Kamienie">Kamienie</option>
                 <option value="Roślinność">Roślinność</option>
                 <option value="Faszyna itp">Faszyna itp</option>
               </select>
-              <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Wygruntuj</button>
+              <div className="row mt-5 justify-content-center">
+                <button className="mt-4 btn btn-warning btn-primary btn-lg" type="submit" value="Submit">Zatwierdź</button>
+              </div>
             </form>
             <p>Tu będzie tekst</p>
           </div>
