@@ -13,7 +13,7 @@ export default class Groundbait extends React.Component {
     return (
       <div className={s.root}>
         <div className="container"></div>
-        <h2 className="mb-5 text-center">Gruntowanie</h2>
+        <h2 className="mb-5 text-center">Zanęta</h2>
         <div className="row justify-content-center">
           <div class="col-sm-12 col-md-6">
           <h3 className="mb-4 text-center text-warning">Przygotowanie zanęty:</h3>
@@ -22,15 +22,15 @@ export default class Groundbait extends React.Component {
             </div>
           </div>
           <div class="col-sm-10 col-md-5">
-            Zanęta
             <ul>
-                <li>Gatunek{this.props.spicies}</li>
-                <li>spławik: Bombka</li>
-                <li>obciążenie główne: 5g</li>
-                <li>obciążenie dodatkowe: 2,4g</li>
-                <li>obiążenie sygnalizacyjne: 3x0,2g</li>
-                <li>przypon; 0,12mm x 30cm</li>
-                <li>haczyk: nr.14</li>
+                <li>zanęta | litry zanęty</li>
+                <li>glina | litry gliny</li>
+                <li>ziemia | litry ziemi</li>
+                <li>bentonit | litry bentonitu</li>
+                <li>woda | litry wody</li>
+                <li>dodatki | litry dodatków</li>
+                <li>robaki | litry robaków</li>
+                <li>sito | grubość sita</li>
               </ul>
         </div>
         </div>
