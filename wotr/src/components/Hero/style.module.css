@@ -2,18 +2,24 @@
     width: 100%;
     height: 100vh ;
     background-color: black;
+    z-index: 0;
   }
   
-  .bg{
+  .picture{
     height: 100vh;
-  }
-  
-  .text{
-    position: relative;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
     z-index: 1;
-    color: #fff;
-    font-size:20px;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
+  }
+
+  .hero p{
+    display: none;
+  }
+
+  .hero h3{
+    margin-bottom: 150px !important;
+    font-weight: 500 !important;
+    font-size: 40px !important;
+    text-shadow: 3px 3px #000 !important;
   }

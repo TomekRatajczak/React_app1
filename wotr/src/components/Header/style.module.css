@@ -1,12 +1,23 @@
-.header{
-    padding:20px  0;
-}
+
 
 .logo{
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     letter-spacing: 1px;
     padding: 10px;
-    border: 1px solid #fff;
-    margin-left: 20px;
+    border: 2px solid #ffc421;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+.link{
+    color: #fff;
+    margin: 0 10px;
+}
+
+.link:link{
+    text-decoration: none;
+}
+.link:hover{
+    color: #ffc421;
 }

@@ -67,7 +67,7 @@ export default class FishingForm extends React.Component{
 
   render(){
     return (
-      <div className={s.root}>
+      <div className={s.root} id="link3">
         <div className="container">
           <h2 className="mb-5 text-center">Formularz</h2>
           <form className="form-group" onSubmit={this.handleOnSubmit}>
@@ -146,8 +146,8 @@ export default class FishingForm extends React.Component{
                   <label className="form-check-label" for="Oficjalny trening">Oficjalny trening</label>
                 </div>
                 <div className="form-check form-check-inline">
-                  <input value={this.state.value} onChange={this.handleOnTypeOfCatchChange} className="form-check-input" type="radio" name="typeOfCatch" id="Zawoody" value="Zawoody" />
-                  <label className="form-check-label" for="Zawoody">Zawoody</label>
+                  <input value={this.state.value} onChange={this.handleOnTypeOfCatchChange} className="form-check-input" type="radio" name="typeOfCatch" id="Zawody" value="Zawody" />
+                  <label className="form-check-label" for="Zawody">Zawody</label>
                 </div>
               </div>
             </div>
@@ -226,8 +226,8 @@ export default class FishingForm extends React.Component{
                     <label className="form-check-label" for="Leszcz">Leszcz</label>
                   </div>
                   <div className="form-check">
-                    <input value={this.state.value} onChange={this.handleOnSpiciesChange} className="form-check-input" type="radio" name="spicies" id="Kleń, Jaź, Jelec" value="Kleń, Jaź, Jelec" />
-                    <label className="form-check-label" for="Kleń, Jaź, Jelec">Kleń, Jaź, Jelec</label>
+                    <input value={this.state.value} onChange={this.handleOnSpiciesChange} className="form-check-input" type="radio" name="spicies" id="Kleń, Jaź, Brzana" value="Kleń, Jaź, Brzana" />
+                    <label className="form-check-label" for="Kleń, Jaź, Brzana">Kleń, Jaź, Brzana</label>
                   </div>
                   <div className="form-check">
                     <input value={this.state.value} onChange={this.handleOnSpiciesChange} className="form-check-input" type="radio" name="spicies" id="Ryby karpiowate małe" value="Ryby karpiowate małe" />

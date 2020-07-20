@@ -67,8 +67,8 @@ export default class App extends React.Component {
         <FishingForm {...fishingForm} onSubmit={this.handleOnChangeState.bind(this)} state={this.state.fishingForm}/>
         <DepthTest {...depthTest} onSubmit={this.handleOnChangeDepthTestState.bind(this)} state={this.state.depthTest}/>
         <FloatSets {...floatSets} onSubmit={this.handleOnChangeFloatSets.bind(this)} state={this.state.floatSets} {...this.state.depthTest} {...this.state.fishingForm} />
-        <Groundbait {...groundbait} {...this.state.fishingForm} />
-        <Tactics {...tactics} />
+        <Groundbait {...groundbait} {...this.state.depthTest} {...this.state.fishingForm} />
+        <Tactics {...tactics} {...this.state.depthTest} {...this.state.floatSets} {...this.state.fishingForm} />
         <Footer {...contact} {...contactDetails} />
       </div>
     );

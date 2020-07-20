@@ -200,7 +200,7 @@ export const homepage = {
         email: "kontakt@example.com"
     },
     contact: {
-      title: 'Chcesz dowiedzieć się wiecej lub umówić się na wspólne wędkowanie!',
+      title: 'Chcesz dowiedzieć się wiecej lub umówić się na wspólne wędkowanie?',
       subtitle: 'Jeżeli pragniesz zdobywać wiecej wiedzy zajrzyj na nasze socialmedia!',
       phoneIcon: require('../src/images/phone.svg'),
       mailIcon: require('../src/images/mail.svg'),

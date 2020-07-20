@@ -13,3 +13,32 @@
     opacity: 0.5;
 
 }
+
+.location{
+    font-size: 70px;
+    font-weight: 500;
+    color: #ffc421;
+}
+
+.date{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.icon{
+    width: 150px;
+    height: 150px;
+}
+
+.temperature{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.clouds{
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+

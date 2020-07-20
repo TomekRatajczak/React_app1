@@ -11,18 +11,18 @@ import {
 const items = [
   {
     src: require('./img/1.jpg'),
-    altText: 'Łowienie na rzece wcale nie jest takie trudne!',
-    caption: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach - kliknij w przycisk poniżej i poznaj nasze techniki'
+    altText: 'leszcz',
+    caption: 'Łowienie na rzece wcale nie jest takie trudne jak ci się wydaje...'
   },
   {
-    src:  require('./img/2.jpg'),
-    altText: 'Łowienie na rzece wcale nie jest takie trudne!',
-    caption: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach - kliknij w przycisk poniżej i poznaj nasze techniki'
+    src: require('./img/2.jpg'),
+    altText: 'spławiki',
+    caption: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach...'
   },
   {
-    src:  require('./img/3.jpg'),
-    altText: 'Łowienie na rzece wcale nie jest takie trudne!',
-    caption: 'Jeżeli chcesz dowiedzieć się jak skutecznie łowić w każdych warunkach - kliknij w przycisk poniżej i poznaj nasze techniki'
+    src: require('./img/3.jpg'),
+    altText: 'wędkarz',
+    caption: 'Jeżeli nie chcesz być kolejnym Januszem nad wodą...'
   }
 ];
 
@@ -54,7 +54,7 @@ const Hero = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img className="w-100 vh-100"  src={item.src} alt={item.altText} />
+        <img className={s.picture} src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );
@@ -63,17 +63,20 @@ const Hero = (props) => {
 
 
   return (
-
-    <Carousel 
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators  items={items } activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+    <div className={s.root}>
+      <div className={s.hero}>
+        <Carousel
+          activeIndex={activeIndex}
+          next={next}
+          previous={previous}
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+        </Carousel>
+      </div>
+    </div>
   );
 }
 

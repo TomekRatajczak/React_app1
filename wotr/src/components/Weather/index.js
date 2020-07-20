@@ -1,22 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import s from './style.module.css';
 const api = {
   key: "3fd76667636a1b1e95e4306274b34af4",
   base: "https://api.openweathermap.org/data/2.5/"
 }
-export default function Weather({title}) {
+export default function Weather({ title }) {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
   const search = evt => {
-    if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then(res => res.json())
-        .then(result => {
-          setQuery('');
-          setWeather(result);
-        });
-    }
+    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}&lang=pl`)
+      .then(res => res.json())
+      .then(result => {
+        setQuery('');
+        setWeather(result);
+      });
+
   }
 
   const dateBuilder = (d) => {
@@ -34,32 +33,34 @@ export default function Weather({title}) {
   }
   return (
 
-    <div className={s.root}>
-      
+    <div className={s.root} id="link2">
+
       <div className="container">
-        <h2 className="mb-5">{title}</h2>
-        <div className="search-box">
+        <h2 className="mb-5" >{title}</h2>
+        <form class="input-group col-xs-10 col-md-8 mx-auto" onSubmit={search}>
           <input
             type="text"
-            className="search-bar"
+            className="form-control border border-warning bg-dark text-white"
             placeholder="Wpisz Miasto"
-            onChange={e=>setQuery(e.target.value)}
+            onChange={e => setQuery(e.target.value)}
             value={query}
-            onKeyPress={search}
           />
-        </div>
+          <button type="submit" class="btn btn-primary btn-warning mb-2">Sprawdź</button>
+        </form>
         {(typeof weather.main != "undefined") ? (
           <div>
             <div className="location-box">
-              <div className="location">{weather.name}, {weather.sys.country}</div>
-              <div className="date">{dateBuilder(new Date())}</div>
+              <div className={s.location}>{weather.name}, {weather.sys.country}</div>
+              <div className={s.date}>{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
-              <div className="temp">Temperatura: {Math.round(weather.main.temp)}&#8451;</div>
-              <div className="weather">Zachmurzenie: {weather.weather[0].description}</div>
+              <div><img className={s.icon} src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}/></div>
+              <div className={s.temperature}>{Math.round(weather.main.temp)}&#8451;</div>
+              <div className={s.clouds}>{weather.weather[0].description}</div>
               
               <div className="weather">Wiatr: {Math.round(weather.wind.speed)} m/s</div>
-            </div> 
+              <div className="weather">Ciśnienie: {Math.round(weather.main.pressure)} hPa</div>
+            </div>
           </div>
         ) : ('')}
       </div>
